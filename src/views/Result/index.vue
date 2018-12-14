@@ -2,20 +2,23 @@
    <v-content>
     <v-container>
       <v-layout>
-        <v-radio-group v-model="row" row>
-           <v-radio label="片道" value="radio-1"></v-radio>
-           <v-radio label="往復" value="radio-2"></v-radio>
-        </v-radio-group>
+        <v-flex>
+            12月16日（日） 〇〇空港発　△△空港着
+        </v-flex>
       </v-layout>
-      <v-layout row wrap>
+      <v-layout row wrap >
         <v-flex xs4>
-         <v-text-field label="出発地" outline></v-text-field>
+        <v-combobox 
+          v-model="sortselect"
+          :items="sorts"
+          label="並び替え"
+        ></v-combobox>
         </v-flex>
-        <v-spacer></v-spacer>
-        <v-flex xs4>
-         <v-text-field label="目的地" outline></v-text-field>
+      </v-layout>
+      <v-layout >
+        <v-flex>
+            表をがんばって作る
         </v-flex>
-        <v-spacer></v-spacer>
       </v-layout>
     </v-container>
   </v-content>
@@ -24,9 +27,10 @@
 <script>
 export default {
   name: "Result",
-  components: {
-    
-  }
+  data: () => ({
+    sortselect: '価格の安い順',
+    sorts: ['価格の安い順', '所要時間の短い順', 'おすすめ順']
+  })
 };
 </script>
 
