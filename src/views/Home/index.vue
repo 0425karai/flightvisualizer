@@ -8,15 +8,20 @@
         </v-radio-group>
       </v-layout>
       <v-layout row wrap>
+        <v-flex xs4>
          <v-text-field label="出発地" outline></v-text-field>
+        </v-flex>
+        <v-spacer></v-spacer>
+        <v-flex xs4>
          <v-text-field label="目的地" outline></v-text-field>
+        </v-flex>
+        <v-spacer></v-spacer>
       </v-layout>
     </v-container>
 
     <v-container>
       <v-layout row wrap>
-       <v-spacer></v-spacer>
-       <v-flex xs12 sm6 md4>
+       <v-flex xs4>
          <v-dialog
            ref="dialog"
            v-model="modal"
@@ -41,51 +46,79 @@
          </v-dialog>
        </v-flex>
        <v-spacer></v-spacer>
-       <v-flex xs12 sm6 md4 class="hidden-xs-only">
-         <v-dialog
-           ref="dialog"
-           v-model="modal"
-           :return-value.sync="date2"
-           persistent
-           lazy
-           full-width
-           width="290px"
-         >
-           <v-text-field
-             slot="activator"
-             v-model="date2"
-             label="現地到着日"
-             prepend-icon="event"
-             readonly
-           ></v-text-field>
-           <v-date-picker v-model="date2" scrollable>
-             <v-spacer></v-spacer>
-             <v-btn flat color="primary" @click="modal = false">Cancel</v-btn>
-             <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
-           </v-date-picker>
-         </v-dialog>
-       </v-flex>
-       <v-spacer></v-spacer>
-     </v-layout>
+       <v-flex xs4>
+          <v-dialog
+            ref="dialog"
+            v-model="modal"
+            :return-value.sync="date2"
+            persistent
+            lazy
+            full-width
+            width="290px"
+          >
+          <v-text-field
+            slot="activator"
+            v-model="date2"
+            label="現地到着日"
+            prepend-icon="event"
+            readonly
+          ></v-text-field>
+          <v-date-picker v-model="date2" scrollable>
+            <v-spacer></v-spacer>
+            <v-btn flat color="primary" @click="modal = false">Cancel</v-btn>
+            <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+          </v-date-picker>
+          </v-dialog>
+        </v-flex>
+        <v-spacer></v-spacer>
+      </v-layout>
     </v-container>
 
-    <v-container fluid>
-     <v-layout row wrap>
-       <v-flex xs4>
-         <v-combobox
+    <v-container>
+      <v-layout row wrap >
+        <v-flex xs4>
+        <v-combobox 
+          v-model="countselect"
+          :items="counts"
+          label="人数"
+        ></v-combobox>
+        </v-flex>
+        <v-spacer></v-spacer>
+        <v-flex xs4>
+        <v-combobox
+          v-model="seatselect"
+          :items="seats"
+          label="座席"
+        ></v-combobox>
+        </v-flex>
+        <v-spacer></v-spacer>
+      </v-layout>
+    </v-container>
 
-           v-model="countselect"
-           :items="counts"
-           label="人数"
-         ></v-combobox>
-         <v-combobox
-           v-model="seatselect"
-           :items="seats"
-           label="座席"
-         ></v-combobox>
-       </v-flex>
-     </v-layout>
-   </v-container>
+    <v-container class="text-xs-center">
+      <v-layout justify-center="">
+        <v-dialog v-model="dialog" width="500">
+          <v-btn slot="activator" color="blue lighten-1" dark>
+            検索
+          </v-btn>
+          <v-card>
+            <v-card-title class="headline grey lighten-2" primary-title>
+              次の画面に移ります
+            </v-card-title>
+            <v-card-text>
+              待ってね待ってね〜
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="primary" flat @click="dialog = false">
+                I accept
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </v-layout>
+    </v-container>
   </v-content>
 </template>
 
