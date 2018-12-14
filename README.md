@@ -1,5 +1,5 @@
 # flightvisualizer
-<<<<<<< HEAD
+
 /荒井健吾がコメントを追加しました/
 =======
 konnichiha
