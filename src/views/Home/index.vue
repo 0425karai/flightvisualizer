@@ -75,7 +75,7 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap justify-center="">
+      <v-layout row wrap >
         <v-flex xs4>
         <v-combobox 
           v-model="countselect"
