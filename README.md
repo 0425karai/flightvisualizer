@@ -1,5 +1,9 @@
 # flightvisualizer
+<<<<<<< HEAD
 /荒井健吾がコメントを追加しました/
+=======
+konnichiha
+>>>>>>> 3d76c0a51f4f2187afae4112494eac33d0c06e40
 ## Project setup
 ```
 npm install
@@ -28,4 +32,5 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### nagata test
+aaaaaaaaaa
+### nagata 
