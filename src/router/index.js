@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/views/Home";
 import Layout from "@/views/Layout";
+import Result from "@/views/Result";
 
 Vue.use(Router);
 
@@ -17,6 +18,11 @@ const router = new Router({
           path: "/home",
           name: "home",
           component: Home
+        },
+        {
+          path: "/result",
+          name: "result",
+          component: Result
         }
       ]
     }
