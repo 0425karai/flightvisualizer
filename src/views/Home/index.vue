@@ -28,36 +28,35 @@
 
     <v-container align-center>
       <v-layout raw wrap>
-       <v-spacer></v-spacer>
-       <v-flex xs4>
-
-         <v-menu
-           ref="menu1"
-           v-model="modal1"
-           :close-on-content-click="false"
-           :nudge-right="200"
-           transition="scale-transition"
-           offfset-x
-           attach
-           full-width
-           min-width="290px"
-         >
-           <v-text-field
-             slot="activator"
-             v-model="date1"
-             label="出発日"
-             prepend-icon="event"
-             readonly
-           ></v-text-field>
-           <v-date-picker v-model="date1" color="light-blue" scrollable>
-             <v-spacer></v-spacer>
-             <v-btn flat color="light-blue" @click="modal1 = false">Cancel</v-btn>
-             <v-btn flat color="light-blue" @click="$refs.menu1.save(date1)">OK</v-btn>
-           </v-date-picker>
-         </v-menu>
-       </v-flex>
-       <v-spacer></v-spacer>
-       <v-flex xs4>
+        <v-spacer></v-spacer>
+        <v-flex xs4>
+          <v-menu
+            ref="menu1"
+            v-model="modal1"
+            :close-on-content-click="false"
+            :nudge-right="200"
+            transition="scale-transition"
+            offfset-x
+            attach
+            full-width
+            min-width="290px"
+          >
+            <v-text-field
+              slot="activator"
+              v-model="date1"
+              label="出発日"
+              prepend-icon="event"
+              readonly
+            ></v-text-field>
+            <v-date-picker v-model="date1" color="light-blue" scrollable>
+              <v-spacer></v-spacer>
+              <v-btn flat color="light-blue" @click="modal1 = false">Cancel</v-btn>
+              <v-btn flat color="light-blue" @click="$refs.menu1.save(date1)">OK</v-btn>
+            </v-date-picker>
+          </v-menu>
+        </v-flex>
+        <v-spacer></v-spacer>
+        <v-flex xs4>
           <v-menu
             ref="menu2"
             v-model="modal2"
@@ -119,17 +118,18 @@
           </v-btn>
           <v-card>
             <v-card-title class="headline grey lighten-2" primary-title>
-              次の画面に移ります
+              検索中です…
             </v-card-title>
             <v-card-text>
-              待ってね待ってね〜
+              画面が切り替わらない場合は以下をクリック
             </v-card-text>
             <v-divider></v-divider>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="primary" flat @click="dialog = false">
-                I accept
+              <v-btn color="primary" flat to="/result">
+                検索結果へ
               </v-btn>
+              <v-spacer></v-spacer>
             </v-card-actions>
           </v-card>
         </v-dialog>
