@@ -1,16 +1,13 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="desserts"
+    :items="Time"
     class="elevation-1"
   >
     <template slot="items" slot-scope="props">
       <td>{{ props.item.name }}</td>
-      <td class="text-xs-right">{{ props.item.calories }}</td>
-      <td class="text-xs-right">{{ props.item.fat }}</td>
-      <td class="text-xs-right">{{ props.item.carbs }}</td>
-      <td class="text-xs-right">{{ props.item.protein }}</td>
-      <td class="text-xs-right">{{ props.item.iron }}</td>
+      <td class="text-xs-right">{{ props.item.recommend1 }}</td>
+      <td class="text-xs-right">{{ props.item.recommend2 }}</td>
     </template>
   </v-data-table>
 </template>
