@@ -2,8 +2,9 @@
    <v-content>
     <v-container>
       <v-layout row wrap>
-        <v-flex >
-            12月16日（日） 〇〇空港発　△△空港着
+        <v-flex>
+           出発日<p>{{ date1 }}〇〇空港発</p>
+           現地到着日<p>{{ date2 }}△△空港着</p>
         </v-flex>
       </v-layout>
       <v-layout row wrap >
@@ -18,7 +19,7 @@
       </v-layout>
       <v-layout >
         <v-flex xs3>
-          <v-card height="45">候補1</br>8時間30分</v-card>
+          <v-card height="45">候補1<br/>8時間30分</v-card>
         </v-flex>
         <v-flex xs9>
             <svg viewbox="0 0 600 45" width="600" height="45">
@@ -37,7 +38,7 @@
       </v-layout>
       <v-layout>
         <v-flex xs3>
-          <v-card height="45">候補2</br>7時間</v-card>
+          <v-card height="45">候補2<br/>7時間</v-card>
         </v-flex>
         <v-flex xs9>
             <svg viewbox="0 0 600 45" width="600" height="45">
@@ -47,7 +48,7 @@
       </v-layout>
       <v-layout>
         <v-flex xs3>
-          <p>候補3</br>9時間15分</p>
+          <p>候補3<br/>9時間15分</p>
         </v-flex>
         <v-flex xs9>
             <svg viewbox="0 0 600 45" width="600" height="45">
@@ -57,18 +58,27 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-content>
+   </v-content>  
 </template>
 
 <script>
+import Vue from 'vue';
 export default {
   name: "Result",
   data: () => ({
     sortselect: '価格の安い順',
-    sorts: ['価格の安い順', '所要時間の短い順', 'おすすめ順']
-  })
-};
-
+    sorts: ['価格の安い順', '所要時間の短い順', 'おすすめ順'],
+    message2: null,
+    date1: null,
+    date2: null,
+  }),
+  created(){
+    this.date1 = Vue.ls.get('date1');
+    console.log(date1);
+    this.date2 = Vue.ls.get('date2');
+    console.log(date2);
+  }
+}
 
 </script>
 

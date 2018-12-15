@@ -6922,6 +6922,11 @@ vue-loader@^15.4.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-ls@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-ls/-/vue-ls-3.2.0.tgz#33356ad3ec9c30dac203757cf4036abe4ff767b3"
+  integrity sha512-39FGQMrT9NbG5WGDJfxWj19ZD1tsVoBBN1n8qvq6/+uRB9BansQ9NSyclQ9TzZatRkkM/VEQo5oTsijdM5hGFw==
+
 vue-router@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.2.tgz#dedc67afe6c4e2bc25682c8b1c2a8c0d7c7e56be"
