@@ -3,6 +3,7 @@
     :headers="headers"
     :items="Time"
     class="elevation-1"
+    hide-actions
   >
     <template slot="items" slot-scope="props">
       <td>{{ props.item.name }}</td>
@@ -24,8 +25,16 @@
             sortable: false,
             value: 'time'
           },
-          { text: 'recommend1', value: 'recommend1' },
-          { text: 'recommend2', value: 'recommend2' }
+          { 
+            text: 'recommend1',
+            value: 'recommend1',
+            sortable: false,
+          },
+          {
+            text: 'recommend2',
+            value: 'recommend2',
+            sortable: false,
+          }
           
         ],
         Time: [
