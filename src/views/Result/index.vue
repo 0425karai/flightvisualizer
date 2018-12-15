@@ -1,8 +1,8 @@
 <template>
    <v-content>
     <v-container>
-      <v-layout>
-        <v-flex>
+      <v-layout row wrap>
+        <v-flex >
             12月16日（日） 〇〇空港発　△△空港着
         </v-flex>
       </v-layout>
