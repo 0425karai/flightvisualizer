@@ -7,26 +7,22 @@
            <v-radio label="片道" value="radio-1"></v-radio>
            <v-radio label="往復" value="radio-2"></v-radio>
         </v-radio-group>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
       </v-layout>
       <v-layout row wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="出発地" outline></v-text-field>
+         <v-text-field label="出発地" 
+         v-on:keyup.enter="doneEdit" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="目的地" outline></v-text-field>
+         <v-text-field label="目的地" ref="goal" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
     </v-container>
 
-    <v-container align-center>
+    <v-container>
       <v-layout raw wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
@@ -87,7 +83,7 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap>
+      <v-layout row wrap >
         <v-spacer></v-spacer>
         <v-flex xs4>
         <v-combobox 
@@ -151,7 +147,12 @@ export default {
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
     seats: ['first', 'business', 'economy']
-  })
+  }),
+  methods: {
+    doneEdit: function() {
+      this.$refs.goal.focus()
+    }
+  }
 };
 </script>
 
