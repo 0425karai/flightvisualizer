@@ -20,55 +20,59 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap>
+      <v-layout raw wrap>
        <v-flex xs4>
-         <v-dialog
-           ref="dialog"
-           v-model="modal"
-           :return-value.sync="date"
-           persistent
-           lazy
+         <v-menu
+           ref="menu1"
+           v-model="modal1"
+           :close-on-content-click="false"
+           :nudge-right="200"
+           transition="scale-transition"
+           offfset-x
+           attach
            full-width
-           width="290px"
+           min-width="290px"
          >
            <v-text-field
              slot="activator"
-             v-model="date"
+             v-model="date1"
              label="出発日"
              prepend-icon="event"
              readonly
            ></v-text-field>
-           <v-date-picker v-model="date" color="light-blue" scrollable>
+           <v-date-picker v-model="date1" color="light-blue" scrollable>
              <v-spacer></v-spacer>
-             <v-btn flat color="light-blue" @click="modal = false">Cancel</v-btn>
-             <v-btn flat color="light-blue" @click="$refs.dialog.save(date)">OK</v-btn>
+             <v-btn flat color="light-blue" @click="modal1 = false">Cancel</v-btn>
+             <v-btn flat color="light-blue" @click="$refs.menu1.save(date1)">OK</v-btn>
            </v-date-picker>
-         </v-dialog>
+         </v-menu>
        </v-flex>
        <v-spacer></v-spacer>
        <v-flex xs4>
-          <v-dialog
-            ref="dialog"
-            v-model="modal"
-            :return-value.sync="date2"
-            persistent
-            lazy
+          <v-menu
+            ref="menu2"
+            v-model="modal2"
+            :close-on-content-click="false"
+            :nudge-right="200"
+            transition="scale-transition"
+            offfset-x
+            attach
             full-width
-            width="290px"
+            min-width="290px"
           >
-          <v-text-field
-            slot="activator"
-            v-model="date2"
-            label="現地到着日"
-            prepend-icon="event"
-            readonly
+            <v-text-field
+              slot="activator"
+              v-model="date2"
+              label="現地到着日"
+              prepend-icon="event"
+              readonly
           ></v-text-field>
-          <v-date-picker v-model="date2" scrollable>
+          <v-date-picker v-model="date2" color="pink" scrollable>
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click="modal = false">Cancel</v-btn>
-            <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+            <v-btn flat color="pink" @click="modal2 = false">Cancel</v-btn>
+            <v-btn flat color="pink" @click="$refs.menu2.save(date2)">OK</v-btn>
           </v-date-picker>
-          </v-dialog>
+          </v-menu>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -81,6 +85,7 @@
           v-model="countselect"
           :items="counts"
           label="人数"
+          attach
         ></v-combobox>
         </v-flex>
         <v-spacer></v-spacer>
@@ -89,6 +94,7 @@
           v-model="seatselect"
           :items="seats"
           label="座席"
+          attach
         ></v-combobox>
         </v-flex>
         <v-spacer></v-spacer>
@@ -119,6 +125,7 @@
         </v-dialog>
       </v-layout>
     </v-container>
+
   </v-content>
 </template>
 
@@ -126,11 +133,10 @@
 export default {
   name: "Home",
   data: () => ({
-    date: new Date().toISOString().substr(0, 10),
+    date1: new Date().toISOString().substr(0, 10),
     date2: new Date().toISOString().substr(0, 10),
-    menu: false,
-    modal: false,
-    menu2: false,
+    modal1: false,
+    modal2: false,
     countselect: '1',
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
