@@ -2803,6 +2803,11 @@ function-bind@^1.0.2, function-bind@^1.1.0, function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+gantt-elastic@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/gantt-elastic/-/gantt-elastic-0.4.0.tgz#c1b50f9da145e2b902a555fa3f7133fe64bddd89"
+  integrity sha512-UVS6LTsYK7LSQhn4+o71MgLn+y+YV11bE7rNmF2oy/uufkviBC1umDnTnV2Jro+E0FFptVopC4FmDDdRcjm31Q==
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"

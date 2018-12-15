@@ -11,11 +11,12 @@
       <v-layout row wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="出発地" outline></v-text-field>
+         <v-text-field label="出発地" 
+         v-on:keyup.enter="doneEdit" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="目的地" outline></v-text-field>
+         <v-text-field label="目的地" ref="goal" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -146,7 +147,12 @@ export default {
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
     seats: ['first', 'business', 'economy']
-  })
+  }),
+  methods: {
+    doneEdit: function() {
+      this.$refs.goal.focus()
+    }
+  }
 };
 </script>
 
