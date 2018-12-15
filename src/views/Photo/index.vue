@@ -22,107 +22,35 @@
       return {
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'Time',
             align: 'left',
             sortable: false,
-            value: 'name'
+            value: 'time'
           },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' }
+          { text: 'recommend1', value: 'recommend1' },
+          { text: 'recommend2', value: 'recommend2' }
+          
         ],
-        desserts: [
+        Time: [
           {
             value: false,
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%'
+            name: '1hr',
+            recommend1: 'https://re-lief.net/wp-content/uploads/slw8.jpg',
+            recommend2: 'https://img.guide.travel.co.jp/article/704/23355/0983203EB7A84B1FB9F886D0D2D8E7D3_LL.jpg'
           },
           {
             value: false,
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3,
-            iron: '1%'
+            name: '3hr',
+            recommend1: 'https://img.4travel.jp/img/tcs/t/tips/pict/src/134/256/src_13425659.jpg',
+            recommend2: 'https://blogimg.goo.ne.jp/user_image/3d/8f/1f671d96235490578b40e508ac505625.jpg'
+
           },
           {
             value: false,
-            name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0,
-            iron: '7%'
-          },
-          {
-            value: false,
-            name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3,
-            iron: '8%'
-          },
-          {
-            value: false,
-            name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9,
-            iron: '16%'
-          },
-          {
-            value: false,
-            name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0,
-            iron: '0%'
-          },
-          {
-            value: false,
-            name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0,
-            iron: '2%'
-          },
-          {
-            value: false,
-            name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5,
-            iron: '45%'
-          },
-          {
-            value: false,
-            name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9,
-            iron: '22%'
-          },
-          {
-            value: false,
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%'
+            name: '12hr',
+            recommend1: 'https://www.ab-road.net/CSP/img/INF/CITY/L/SEL/C00005_x.jpgroad.net%2fCSP%2fimg%2fINF%2fCITY%2fL%2fSEL%2fC00005_x.jpg&exph=346&expw=519&q=%e3%82%bd%e3%82%a6%e3%83%ab%e8%a6%b3%e5%85%89&simid=608050574551287668&selectedIndex=1&ajaxhist=0',
+            recommend2: 'https://tmyun.com/jpeg/yun_4879.jpg'
+
           }
         ]
       }
