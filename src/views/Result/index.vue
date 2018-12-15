@@ -74,9 +74,9 @@ export default {
   }),
   created(){
     this.date1 = Vue.ls.get('date1');
-    console.log(date1);
+    console.log(this.date1);
     this.date2 = Vue.ls.get('date2');
-    console.log(date2);
+    console.log(this.date2);
   }
 }
 
