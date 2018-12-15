@@ -126,7 +126,7 @@
             <v-divider></v-divider>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="primary" flat to="/result">
+              <v-btn color="primary" flat v-on:click="search">
                 検索結果へ
               </v-btn>
               <v-spacer></v-spacer>
@@ -140,6 +140,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 export default {
   name: "Home",
   data: () => ({
@@ -151,7 +152,15 @@ export default {
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
     seats: ['first', 'business', 'economy']
-  })
+  }),
+  methods:{
+    search: function (event) {
+      Vue.ls.set('date1', this.date1);
+      Vue.ls.set('date2', this.date2);
+     this.$router.push("/result")
+    }
+
+  }
 };
 </script>
 
