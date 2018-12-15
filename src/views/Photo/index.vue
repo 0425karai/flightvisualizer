@@ -7,7 +7,7 @@
   >
     <template slot="items" slot-scope="props">
       <td>{{ props.item.name }}</td>
-      <td class="text-xs-right pink">{{ props.item.recommend1 }}</td>
+      <td class="text-xs-right">{{ props.item.recommend1 }}</td>
       <td class="text-xs-right">{{ props.item.recommend2 }}</td>
     </template>
   </v-data-table>
