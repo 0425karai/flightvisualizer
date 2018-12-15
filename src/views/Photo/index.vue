@@ -50,11 +50,10 @@ export default {
           recommend1: 'http://www.ab-road.net/CSP/img/INF/CITY/L/SEL/C00005_x.jpgroad.net%2fCSP%2fimg%2fINF%2fCITY%2fL%2fSEL%2fC00005_x.jpg&exph=346&expw=519&q=%e3%82%bd%e3%82%a6%e3%83%ab%e8%a6%b3%e5%85%89&simid=608050574551287668&selectedIndex=1&ajaxhist=0',
           recommend2: 'https://tmyun.com/jpeg/yun_4879.jpg'
 
-
-          }
-        ]
-      }
-    },
+        }
+      ]
+    }
+  },
   methods: {
       getColorClass(index) {
         switch (Number(index) % 3) {
