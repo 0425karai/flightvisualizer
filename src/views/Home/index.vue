@@ -20,19 +20,18 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap>
+      <v-layout raw wrap>
        <v-flex xs4>
          <v-menu
-           ref="dialog1"
-           :close-on-content-click="false"
+           ref="menu1"
            v-model="modal1"
-           :nudge-right="40"
-           :return-value.sync="date1"
-           lazy
+           :close-on-content-click="false"
+           :nudge-right="200"
            transition="scale-transition"
-           offfset-y
+           offfset-x
+           attach
            full-width
-           width="290px"
+           min-width="290px"
          >
            <v-text-field
              slot="activator"
@@ -44,34 +43,36 @@
            <v-date-picker v-model="date1" color="light-blue" scrollable>
              <v-spacer></v-spacer>
              <v-btn flat color="light-blue" @click="modal1 = false">Cancel</v-btn>
-             <v-btn flat color="light-blue" @click="$refs.dialog1.save(date1)">OK</v-btn>
+             <v-btn flat color="light-blue" @click="$refs.menu1.save(date1)">OK</v-btn>
            </v-date-picker>
          </v-menu>
        </v-flex>
        <v-spacer></v-spacer>
        <v-flex xs4>
-          <v-dialog
-            ref="dialog2"
+          <v-menu
+            ref="menu2"
             v-model="modal2"
-            :return-value.sync="date2"
-            persistent
-            lazy
+            :close-on-content-click="false"
+            :nudge-right="200"
+            transition="scale-transition"
+            offfset-x
+            attach
             full-width
-            width="290px"
+            min-width="290px"
           >
-          <v-text-field
-            slot="activator"
-            v-model="date2"
-            label="現地到着日"
-            prepend-icon="event"
-            readonly
+            <v-text-field
+              slot="activator"
+              v-model="date2"
+              label="現地到着日"
+              prepend-icon="event"
+              readonly
           ></v-text-field>
           <v-date-picker v-model="date2" color="pink" scrollable>
             <v-spacer></v-spacer>
             <v-btn flat color="pink" @click="modal2 = false">Cancel</v-btn>
-            <v-btn flat color="pink" @click="$refs.dialog2.save(date2)">OK</v-btn>
+            <v-btn flat color="pink" @click="$refs.menu2.save(date2)">OK</v-btn>
           </v-date-picker>
-          </v-dialog>
+          </v-menu>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -124,6 +125,7 @@
         </v-dialog>
       </v-layout>
     </v-container>
+
   </v-content>
 </template>
 
