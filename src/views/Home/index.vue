@@ -2,12 +2,19 @@
   <v-content>
     <v-container>
       <v-layout>
+        <v-spacer></v-spacer>
         <v-radio-group v-model="row" row>
            <v-radio label="片道" value="radio-1"></v-radio>
            <v-radio label="往復" value="radio-2"></v-radio>
         </v-radio-group>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
       </v-layout>
       <v-layout row wrap>
+        <v-spacer></v-spacer>
         <v-flex xs4>
          <v-text-field label="出発地" outline></v-text-field>
         </v-flex>
@@ -19,9 +26,11 @@
       </v-layout>
     </v-container>
 
-    <v-container>
+    <v-container align-center>
       <v-layout raw wrap>
+       <v-spacer></v-spacer>
        <v-flex xs4>
+
          <v-menu
            ref="menu1"
            v-model="modal1"
@@ -79,7 +88,8 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap >
+      <v-layout row wrap>
+        <v-spacer></v-spacer>
         <v-flex xs4>
         <v-combobox 
           v-model="countselect"

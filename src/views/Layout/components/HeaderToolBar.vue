@@ -11,8 +11,10 @@
       <v-toolbar-title class="mr-5 align-center">
         <span class="title">FlightVisualizer</span>
       </v-toolbar-title>
+      <span style="font-size: 2em; color: white;">
+        <i class="fas fa-plane-departure"></i>
+      </span>
       <v-spacer></v-spacer>
-      
     </v-toolbar>
   </div>
 </template>
