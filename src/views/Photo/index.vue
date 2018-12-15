@@ -6,9 +6,15 @@
     hide-actions
   >
     <template slot="items" slot-scope="props">
-      <td>{{ props.item.name }}</td>
-      <td class="text-xs-right">{{ props.item.recommend1 }}</td>
-      <td class="text-xs-right">{{ props.item.recommend2 }}</td>
+      <tr :class="getColorClass(props.index)">
+        <td class=".font-weight-thin">{{ props.item.name }}
+          <span style="font-size: 2em; color:#3E2723;">
+            <i class="fas fa-clock"></i>
+          </span>
+        </td>
+        <td class="text-xs-right">{{ props.item.recommend1 }}</td>
+        <td class="text-xs-right">{{ props.item.recommend2 }}</td>
+      </tr>
     </template>
   </v-data-table>
 </template>
@@ -59,6 +65,23 @@
 
           }
         ]
+      }
+    },
+    methods: {
+      getColorClass(index) {
+        switch (Number(index) % 3) {
+          case 0:
+            return "lime lighten-3";
+            break;
+          case 1:
+            return "lime lighten-2";
+            break;
+          case 2:
+            return "lime lighten-1";
+            break;
+          default:
+            return "white";
+        }
       }
     }
   }
