@@ -11,12 +11,12 @@
             </span>
             <span style="font-size: 3em; color:#3E2723;">
               <i class="fas fa-clock"></i>
-             </span>
-             <br/>
-             <br/>
-             <span style="font-size:2em">
+            </span>
+            <br/>
+            <br/>
+            <span style="font-size:2em">
              {{time.label}}
-             </span>
+            </span>
           </v-card-text>
         </v-card>
       </v-flex>

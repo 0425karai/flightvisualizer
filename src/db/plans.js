@@ -29,20 +29,23 @@ export default [
           value: false,
           name: '1hr',
           recommend1: 'https://re-lief.net/wp-content/uploads/slw8.jpg',
-          recommend2: 'https://img.guide.travel.co.jp/article/704/23355/0983203EB7A84B1FB9F886D0D2D8E7D3_LL.jpg'
+          recommend2: 'https://img.guide.travel.co.jp/article/704/23355/0983203EB7A84B1FB9F886D0D2D8E7D3_LL.jpg',
+          label: '空港をサッと探検しよう'
         },
         {
           value: false,
           name: '3hr',
           recommend1: 'http://img.4travel.jp/img/tcs/t/tips/pict/src/134/256/src_13425659.jpg',
-          recommend2: 'https://blogimg.goo.ne.jp/user_image/3d/8f/1f671d96235490578b40e508ac505625.jpg'
+          recommend2: 'https://blogimg.goo.ne.jp/user_image/3d/8f/1f671d96235490578b40e508ac505625.jpg',
+          label: '空港でゆったり過ごそう'
 
         },
         {
           value: false,
           name: '12hr',
           recommend1: 'https://www.hdwallpaper.nu/wp-content/uploads/2015/04/464629385-seoul.jpg',
-          recommend2: 'http://www.hikorea.jp/data/topinfo/topinfo_13336960261.jpg'
+          recommend2: 'http://www.hikorea.jp/data/topinfo/topinfo_13336960261.jpg',
+          label: '市街地に出てみよう'
 
         }
       ]
@@ -75,20 +78,23 @@ export default [
           value: false,
           name: '1hr',
           recommend1: 'https://www.heidelbergcement.com/sites/default/files/assets/images/bkk_05.jpg',
-          recommend2: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Suvarnabhumi_Airport,_Bangkok,_Thailand.jpg'
+          recommend2: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Suvarnabhumi_Airport,_Bangkok,_Thailand.jpg',
+          label: '空港をサッと探検しよう'
         },
         {
           value: false,
           name: '3hr',
           recommend1: 'https://cdn.4travel.jp/img/tcs/t/pict/src/41/47/34/src_41473484.jpg?1448294059',
-          recommend2: 'https://cdn.4travel.jp/img/tcs/t/pict/src/42/09/59/src_42095947.jpg?1452505299'
+          recommend2: 'https://cdn.4travel.jp/img/tcs/t/pict/src/42/09/59/src_42095947.jpg?1452505299',
+          label: '空港でゆったり過ごそう'
 
         },
         {
           value: false,
           name: '12hr',
           recommend1: 'https://d18gmz9e98r8v5.cloudfront.net/ptr/20140731002520_1437589073_10009_8.jpg',
-          recommend2: 'https://tabizine.jp/wp-content/uploads/2017/12/161239-01-640x360.jpg'
+          recommend2: 'https://tabizine.jp/wp-content/uploads/2017/12/161239-01-640x360.jpg',
+          label: '市街地に出てみよう'
 
         }
       ]
