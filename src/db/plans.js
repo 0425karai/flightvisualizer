@@ -121,20 +121,23 @@ export default [
           value: false,
           name: '1hr',
           recommend1: 'http://www.rikiya.com/images/hongkong_rikiya-850.jpg',
-          recommend2: 'http://cdn.4travel.jp/img/tcs/t/tips/pict/src/108/203/src_10820324.jpg'
+          recommend2: 'http://cdn.4travel.jp/img/tcs/t/tips/pict/src/108/203/src_10820324.jpg',
+          label: '空港をサッと探検してみよう'
         },
         {
           value: false,
           name: '3hr',
           recommend1: 'http://overseas.travel.rakuten.co.jp/kaigai/overseas_common/tour/images/I000003201.jpg',
-          recommend2: 'https://voyageavance.global/wp-content/uploads/2018/12/IMG_1670.jpg'
+          recommend2: 'https://voyageavance.global/wp-content/uploads/2018/12/IMG_1670.jpg',
+          label: '空港でゆったり過ごそう'
 
         },
         {
           value: false,
           name: '12hr',
           recommend1: 'http://tabippo.net/wp-content/uploads/shutterstock_150265067.jpg',
-          recommend2: 'http://livedoor.blogimg.jp/sevenhdr/imgs/a/0/a06e652f.jpg'
+          recommend2: 'http://livedoor.blogimg.jp/sevenhdr/imgs/a/0/a06e652f.jpg',
+          label: '市街地に出てみよう'
 
         }
       ]

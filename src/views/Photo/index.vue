@@ -5,7 +5,7 @@
         <v-card>
           <v-card-text class="px-0">{{time.name}}
             <span style="font-size: 2em; color:#3E2723;">
-              <i class="fas fa-clock"></i>
+              <i class="fas fa-clock"></i>{{time.label}}
              </span>
           </v-card-text>
         </v-card>
