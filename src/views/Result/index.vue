@@ -21,7 +21,7 @@
           <v-flex d-flex md6>
             <v-card color="blue" class="white--text">
               <v-card-text>
-                <div class="headline">PLAN{{ plan.id }}　{{ plan.time }}　¥{{ plan.cost }}</div>
+                <div class="headline">PLAN{{ plan.id }}:　{{ plan.dep1 }} → {{ plan.dep2 }} → {{ plan.arr2 }}</br>{{ plan.time }}　¥{{ plan.cost }}</div>
               </v-card-text>
             </v-card>
           </v-flex>
@@ -76,7 +76,7 @@
                     <v-container fill-height fluid>
                       <v-layout fill-height>
                         <v-flex xs12 align-end flexbox>
-                          <div class="headline">{{ plan.aname1 }}周辺の<br/>{{ plan.ttime }}で出来る体験を探す</div>
+                          <div class="display-1 text-sm-left">{{ plan.aname1 }}周辺の</br>{{ plan.ttime }}で出来る体験を見る</div>
                       </v-flex>
                       </v-layout>
                     </v-container>
