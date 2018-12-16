@@ -1,10 +1,10 @@
 <template>
    <v-content>
     <v-container grid-list-md>
-      <v-layout row wrap>
-        <v-flex>
-           <p>出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　帰国日{{ date2 }}　</p>
-        </v-flex>
+      <v-layout row wrap d-flex md3>
+        <div class="headline text-md-center font-weight-bold">
+          <v-chip color="lime" text-color="white"><font size="display-3">出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　帰国日{{ date2 }}</font></v-chip>
+        </div>      
       </v-layout>
       <v-layout row wrap >
         <v-flex xs3>
