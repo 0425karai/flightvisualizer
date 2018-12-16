@@ -16,7 +16,7 @@
         ></v-combobox>
         </v-flex>
       </v-layout>
-      <div v-for="(plan, index) in plans" :key="index">
+      <v-container v-for="(plan, index) in plans" :key="index">
         <v-layout column>
           <v-flex d-flex md6>
             <v-card color="blue" class="white--text">
@@ -34,7 +34,7 @@
                       <v-img 
                       class="white--text" 
                       height="200px" 
-                      src="https://www.narita-airport.jp/img/original/img_t006_banner_1__1.jpg"
+                      :src="plan.dimg1"
                       gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
                         <v-container fill-height fluid>
                           <v-layout fill-height>
@@ -71,12 +71,12 @@
                   <v-img 
                   class="white--text" 
                   height="400px" 
-                  src="https://re-lief.net/wp-content/uploads/slw8.jpg"
+                  :src="plan.aimg1"
                   gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
                     <v-container fill-height fluid>
                       <v-layout fill-height>
                         <v-flex xs12 align-end flexbox>
-                          <div class="headline">{{ plan.aname1 }}周辺の楽しいアクティビティ</div>
+                          <div class="headline">{{ plan.aname1 }}周辺の</br>{{ plan.ttime }}で出来る体験を探す</div>
                       </v-flex>
                       </v-layout>
                     </v-container>
@@ -112,7 +112,7 @@
                       <v-img 
                       class="white--text" 
                       height="200px" 
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sculpture_of_hasta_mudras_at_Indira_Gandhi_International_Airport.jpg/1920px-Sculpture_of_hasta_mudras_at_Indira_Gandhi_International_Airport.jpg"
+                      :src="plan.aimg2"
                       gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
                         <v-container fill-height fluid>
                           <v-layout fill-height>
@@ -129,7 +129,7 @@
             </v-layout>
           </v-flex>
         </v-layout>
-      </div>
+      </v-container>
     </v-container>
    </v-content>  
 </template>
@@ -155,19 +155,21 @@ export default {
     cost: plans[0].cost,
     dep1: plans[0].dep1,
     dname1: plans[0].dname1,
+    dimg1: plans[0].dimg1,
     dtime1: plans[0].dtime1,
     arr1: plans[0].arr1,
     aname1: plans[0].aname1,
+    aimg1: plans[0].aimg1,
     atime1: plans[0].atime1,
+    ttime: plans[0].ttime,
     dep2: plans[0].dep2,
+    dimg2: plans[0].dimg2,
     dname2: plans[0].dname2,
     dtime2: plans[0].dtime2,
     arr2: plans[0].arr2,
     aname2: plans[0].aname2,
+    aimg2: plans[0].aimg2,
     atime2: plans[0].atime2,
-
-      
-   
   }),
   created(){
     this.date1 = Vue.ls.get('date1');
