@@ -197,8 +197,8 @@ export default {
     search: function (event) {
       Vue.ls.set('date1', this.date1);
       Vue.ls.set('date2', this.date2);
-      Vue.ls.set('depart', this.start);
-      Vue.ls.set('arrive', this.goal);
+      Vue.ls.set('depart', this.depart);
+      Vue.ls.set('arrive', this.arrive);
       console.log(this.start);
      this.$router.push("/result")
     },

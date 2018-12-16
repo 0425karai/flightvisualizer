@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
-           <p>出発日{{ date1 }}　{{ depart }}発　　現地出発日{{ date2 }}　{{ arrive }}発</p>
+           <p>出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　現地出発日{{ date2 }}　</p>
         </v-flex>
       </v-layout>
       <v-layout row wrap >
