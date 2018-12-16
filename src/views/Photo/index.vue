@@ -6,13 +6,12 @@
          <br/>
          <br/>
           <v-card-text class="px-0">
-             <span style="font-size:2em">
+             <span style="font-size:3em">
             {{time.name}}
             </span>
-            <span style="font-size: 2em; color:#3E2723;">
+            <span style="font-size: 3em; color:#3E2723;">
               <i class="fas fa-clock"></i>
              </span>
-             <br/>
              <br/>
              <br/>
              <span style="font-size:2em">

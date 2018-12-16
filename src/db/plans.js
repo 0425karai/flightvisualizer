@@ -122,7 +122,7 @@ export default [
           name: '1hr',
           recommend1: 'http://www.rikiya.com/images/hongkong_rikiya-850.jpg',
           recommend2: 'http://cdn.4travel.jp/img/tcs/t/tips/pict/src/108/203/src_10820324.jpg',
-          label: '空港をサッと探検してみよう'
+          label: '空港をサッと探検しよう'
         },
         {
           value: false,
