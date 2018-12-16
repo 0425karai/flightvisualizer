@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap d-flex md3>
         <div class="headline text-md-center font-weight-bold">
-          <v-chip color="light-blue darken-4" text-color="white"><font style="font-size:2em">出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　帰国日{{ date2 }}</font></v-chip>
+          <v-chip color="light-blue darken-4" text-color="white"><font style="font-size:2em">   出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　帰国日{{ date2 }}  </font></v-chip>
         </div>      
       </v-layout>
       <v-layout row wrap >
@@ -21,7 +21,7 @@
           <v-flex d-flex md6>
             <v-card color="blue" class="white--text">
               <v-card-text>
-                <div class="headline">PLAN{{ plan.id }}:　{{ plan.dep1 }} → {{ plan.dep2 }} → {{ plan.arr2 }}</br>{{ plan.time }}　¥{{ plan.cost }}　<v-btn color="success" href="https://www.skyscanner.jp/" target="_blank">
+                <div class="headline">PLAN{{ plan.id }}:　{{ plan.dep1 }} → {{ plan.dep2 }} → {{ plan.arr2 }}<br/>{{ plan.time }}　¥{{ plan.cost }}　<v-btn color="success" href="https://www.skyscanner.jp/" target="_blank">
                【予約する】
                 </v-btn></div>
               </v-card-text>
@@ -78,7 +78,7 @@
                     <v-container fill-height fluid>
                       <v-layout fill-height>
                         <v-flex xs12 align-end flexbox>
-                          <div class="display-1 text-sm-left">{{ plan.aname1 }}周辺の</br>{{ plan.ttime }}で出来る体験を見る</div>
+                          <div class="display-1 text-sm-left">{{ plan.aname1 }}周辺の<br/>{{ plan.ttime }}で出来る体験を見る</div>
                       </v-flex>
                       </v-layout>
                     </v-container>
