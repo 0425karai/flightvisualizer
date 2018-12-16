@@ -17,7 +17,9 @@
         </v-flex>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="目的地" ref="goal" outline></v-text-field>
+         <v-text-field
+          v-model="goal" label="目的地"
+          ref="goal" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -58,9 +60,6 @@
           </v-menu>
         </v-flex>
         <v-spacer></v-spacer>
-        <v-flex>
-           出発日<p>{{ date1 }}{{start}}空港発</p>
-        </v-flex>
         <v-flex xs4>
           <v-menu
             ref="menu2"
@@ -163,8 +162,6 @@ export default {
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
     seats: ['first', 'business', 'economy'],
-    min1: null,
-    min2: null,
   }),
 
   methods:{
@@ -172,6 +169,7 @@ export default {
       Vue.ls.set('date1', this.date1);
       Vue.ls.set('date2', this.date2);
       Vue.ls.set('start', this.start);
+      Vue.ls.set('goal', this.goal);
       console.log(this.start);
      this.$router.push("/result")
     },

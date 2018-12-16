@@ -3,8 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
-           出発日<p>{{ date1 }}{{ start }}発</p>
-           現地到着日<p>{{ date2 }}△△空港着</p>
+           <p>出発日{{ date1 }}　{{ start }}発　　現地出発日{{ date2 }}　{{ goal }}発</p>
         </v-flex>
       </v-layout>
       <v-layout row wrap >
@@ -164,6 +163,8 @@ export default {
     console.log(this.date2);
     this.start = Vue.ls.get('start');
     console.log(this.start);
+    this.goal = Vue.ls.get('goal');
+    console.log(this.goal);
   }
 }
 
