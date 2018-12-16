@@ -2,7 +2,7 @@
  <v-container grid-list-md text-xs-center>
     <v-layout v-for="(time, index) in times" :key="index" :class="getColorClass(index)" row wrap>
       <v-flex d-flex xs12 sm3 md2>
-        <v-card>
+        <v-card :class="getColorClass(index)">
          <br/>
          <br/>
           <v-card-text class="px-0">
