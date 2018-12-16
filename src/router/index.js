@@ -5,6 +5,7 @@ import Layout from "@/views/Layout";
 import Result from "@/views/Result";
 import Photo from "@/views/Photo";
 import Landing from "@/views/Landing";
+import Concept from "@/views/Concept";
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ const router = new Router({
           path: "/landing",
           name: "landing",
           component: Landing
+        },
+        {
+          path: "/Concept",
+          name: "Concept",
+          component: Concept
         }
       ]
     }

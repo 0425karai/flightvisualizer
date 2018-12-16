@@ -20,7 +20,7 @@
      </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn flat>詳しく知る</v-btn>
+        <v-btn flat v-on:click="search" >詳しく知る</v-btn>
         <v-btn flat>お問い合わせ</v-btn>
       
       </v-toolbar-items>
@@ -46,8 +46,17 @@ export default {
 this.$router.push('/')
 });
     }
-  }
+  },
+
+  methods:{
+    search: function (event) {
+      
+     this.$router.push("/Concept")
+    },
+
+ }
 };
+
 </script>
 
 <style scoped lang="scss">
