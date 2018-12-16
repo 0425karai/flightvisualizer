@@ -21,7 +21,9 @@
           <v-flex d-flex md6>
             <v-card color="blue" class="white--text">
               <v-card-text>
-                <div class="headline">PLAN{{ plan.id }}:　{{ plan.dep1 }} → {{ plan.dep2 }} → {{ plan.arr2 }}</br>{{ plan.time }}　¥{{ plan.cost }}</div>
+                <div class="headline">PLAN{{ plan.id }}:　{{ plan.dep1 }} → {{ plan.dep2 }} → {{ plan.arr2 }}</br>{{ plan.time }}　¥{{ plan.cost }}　<v-btn color="success" href="https://www.skyscanner.jp/" target="_blank">
+               【予約する】
+                </v-btn></div>
               </v-card-text>
             </v-card>
           </v-flex>
