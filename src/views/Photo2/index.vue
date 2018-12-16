@@ -28,13 +28,32 @@
 </template>
 
 <script>
-import plans from '@/db/plans';
 export default {
-  name: "Photo",
-  props: ["planId"],
+  name: "Photo2",
   data () {
     return {
-      times: plans[this.planId].times
+      times: [
+        {
+          value: false,
+          name: '1hr',
+          recommend1: 'https://www.heidelbergcement.com/sites/default/files/assets/images/bkk_05.jpg',
+          recommend2: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Suvarnabhumi_Airport,_Bangkok,_Thailand.jpg'
+        },
+        {
+          value: false,
+          name: '3hr',
+          recommend1: 'https://cdn.4travel.jp/img/tcs/t/pict/src/41/47/34/src_41473484.jpg?1448294059',
+          recommend2: 'https://cdn.4travel.jp/img/tcs/t/pict/src/42/09/59/src_42095947.jpg?1452505299'
+
+        },
+        {
+          value: false,
+          name: '12hr',
+          recommend1: 'https://d18gmz9e98r8v5.cloudfront.net/ptr/20140731002520_1437589073_10009_8.jpg',
+          recommend2: 'https://tabizine.jp/wp-content/uploads/2017/12/161239-01-640x360.jpg'
+
+        }
+      ]
     }
   },
   methods: {
