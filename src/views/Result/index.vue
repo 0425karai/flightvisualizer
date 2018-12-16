@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
-           <p>出発日{{ date1 }}　{{ start }}発　　現地出発日{{ date2 }}　{{ goal }}発</p>
+           <p>出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　現地出発日{{ date2 }}　</p>
         </v-flex>
       </v-layout>
       <v-layout row wrap >
@@ -62,7 +62,12 @@
                 </v-layout>
               </v-flex>
               <v-flex d-flex xs6>
-                <v-card hover href="#/photo">
+                <v-dialog
+                  v-model="dialog"
+                  width="80%"
+                >
+                 
+                    <v-card  slot="activator"  hover >
                   <v-img 
                   class="white--text" 
                   height="400px" 
@@ -77,6 +82,14 @@
                     </v-container>
                   </v-img>
                 </v-card>
+
+                  <v-card>
+                  
+                    <photo :planId="index"/>
+
+                  </v-card>
+                </v-dialog>
+
               </v-flex>
               <v-flex d-flex xs3>
                 <v-layout column>
@@ -124,8 +137,12 @@
 <script>
 import Vue from 'vue';
 import plans from '@/db/plans';
+import Photo from "@/views/Photo";
 export default {
   name: "Result",
+  components: {
+    Photo
+  },
   data: () => ({
     sortselect: '価格の安い順',
     sorts: ['価格の安い順', '所要時間の短い順', 'おすすめ順'],
@@ -148,12 +165,19 @@ export default {
     arr2: plans[0].arr2,
     aname2: plans[0].aname2,
     atime2: plans[0].atime2,
+
+      
+   
   }),
   created(){
     this.date1 = Vue.ls.get('date1');
     console.log(this.date1);
     this.date2 = Vue.ls.get('date2');
     console.log(this.date2);
+    this.depart = Vue.ls.get('depart');
+    console.log(this.depart);
+    this.arrive = Vue.ls.get('arrive');
+    console.log(this.arrive);
     console.log(plans)
     console.log(plans[0])
     var flight = plans[0][0]
@@ -178,8 +202,9 @@ export default {
       }
       return { hh: hh, mm: mm };
     }
-  }
+  } 
 }
+
 
 </script>
 
