@@ -13,7 +13,7 @@
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
       </v-layout>
-      <v-layout row wrap>
+      <!-- <v-layout row wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
          <v-text-field
@@ -25,6 +25,27 @@
          <v-text-field
           v-model="goal" label="目的地"
           ref="goal" outline></v-text-field>
+        </v-flex>
+        <v-spacer></v-spacer>
+      </v-layout> -->
+      <v-layout row wrap >
+        <v-spacer></v-spacer>
+        <v-flex xs4>
+        <v-combobox 
+         v-model="depart" 
+          :items="departure"
+          label="出発地"
+          attach
+        ></v-combobox>
+        </v-flex>
+        <v-spacer></v-spacer>
+        <v-flex xs4>
+        <v-combobox
+         v-model="arrive"
+          :items="destinations"
+          label="目的地"
+          attach
+        ></v-combobox>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -158,23 +179,26 @@ import Vue from 'vue';
 export default {
   name: "Home",
   data: () => ({
-    start: null,
     date1: new Date().toISOString().substr(0, 10),
     date2: new Date().toISOString().substr(0, 10),
     modal1: false,
     modal2: false,
-    countselect: '1',
+    countselect: '1', 
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
     seats: ['first', 'business', 'economy'],
+    depart: '東京',
+    arrive: 'ニューデリー',
+    departure: ['東京','大阪'],
+    destinations: ['ニューデリー','カザフスタン','イスラエル']
   }),
 
   methods:{
     search: function (event) {
       Vue.ls.set('date1', this.date1);
       Vue.ls.set('date2', this.date2);
-      Vue.ls.set('start', this.start);
-      Vue.ls.set('goal', this.goal);
+      Vue.ls.set('depart', this.start);
+      Vue.ls.set('arrive', this.goal);
       console.log(this.start);
      this.$router.push("/result")
     },
