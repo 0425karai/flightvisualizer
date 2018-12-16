@@ -19,7 +19,14 @@
        </span>
      </router-link>
       <v-spacer></v-spacer>
-      </v-toolbar>
+
+      <v-toolbar-items>
+      <v-btn flat>詳しく知る</v-btn>
+      <v-btn flat>お問い合わせ</v-btn>
+      
+    </v-toolbar-items>
+
+    </v-toolbar>
   </div>
 </template>
 
