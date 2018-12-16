@@ -85,7 +85,7 @@
 
                   <v-card>
                   
-                    <photo/>
+                    <photo :planId="index"/>
 
                   </v-card>
                 </v-dialog>

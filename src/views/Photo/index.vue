@@ -41,10 +41,10 @@ export default {
       getColorClass(index) {
         switch (Number(index) % 3) {
           case 0:
-            return "lime lighten-3";
+            return "lime lighten-5";
             break;
           case 1:
-            return "lime lighten-2";
+            return "lime lighten-3";
             break;
           case 2:
             return "lime lighten-1";
