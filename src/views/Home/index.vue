@@ -51,7 +51,7 @@
       </v-layout>
     </v-container>
 
-    <v-container>
+    <v-container>    
       <v-layout raw wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
@@ -60,6 +60,7 @@
             v-model="modal1"
             :close-on-content-click="false"
             :nudge-right="200"
+            :nudge-top="150"
             transition="scale-transition"
             offfset-x
             attach
@@ -92,6 +93,7 @@
             v-model="modal2"
             :close-on-content-click="false"
             :nudge-right="200"
+            :nudge-top="150"
             transition="scale-transition"
             offfset-x
             attach
@@ -120,8 +122,8 @@
         <v-spacer></v-spacer>
       </v-layout>
     </v-container>
-
-    <v-container>
+    
+    <v-container>    
       <v-layout row wrap >
         <v-spacer></v-spacer>
         <v-flex xs4>
