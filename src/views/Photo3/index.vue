@@ -28,13 +28,32 @@
 </template>
 
 <script>
-import plans from '@/db/plans';
 export default {
-  name: "Photo",
-  props: ["planId"],
+  name: "Photo3",
   data () {
     return {
-      times: plans[this.planId].times
+      times: [
+        {
+          value: false,
+          name: '1hr',
+          recommend1: 'http://airport.zashiki.com/travel-report/20120618JAL-C3/Lsize/DSC_0223.JPG',
+          recommend2: 'http://cdn.4travel.jp/img/tcs/t/tips/pict/src/108/203/src_10820324.jpg'
+        },
+        {
+          value: false,
+          name: '3hr',
+          recommend1: 'http://overseas.travel.rakuten.co.jp/kaigai/overseas_common/tour/images/I000003201.jpg',
+          recommend2: 'https://voyageavance.global/wp-content/uploads/2018/12/IMG_1670.jpg'
+
+        },
+        {
+          value: false,
+          name: '12hr',
+          recommend1: 'http://tabippo.net/wp-content/uploads/shutterstock_150265067.jpg',
+          recommend2: 'http://livedoor.blogimg.jp/sevenhdr/imgs/a/0/a06e652f.jpg'
+
+        }
+      ]
     }
   },
   methods: {

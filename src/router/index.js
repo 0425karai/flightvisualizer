@@ -27,9 +27,10 @@ const router = new Router({
           component: Result
         },
         {
-          path: "/photo",
+          path: "/photo/:planId",
           name: "photo",
-          component: Photo
+          component: Photo,
+          props: true
         },
         {
           path: "/landing",
