@@ -19,7 +19,7 @@
     <v-container class ="blue white--text">
             <v-layout class="text-sm-left">
               <v-flex xs12  flexbox>
-                <span class="display-1">思いがけない素敵なトランジット体験ができるフライトプランを探してみませんか？</span>
+                <span class="display-1">FlightVisualizerで、思いがけない素敵なトランジット体験ができるフライトプランを探してみませんか？</span>
                
               </v-flex>
             </v-layout>

@@ -15,6 +15,12 @@
         <i class="fas fa-plane-departure"></i>
       </span>
       <v-spacer></v-spacer>
+      <v-toolbar-items>
+      <v-btn flat>詳しく知る</v-btn>
+      <v-btn flat>お問い合わせ</v-btn>
+      
+    </v-toolbar-items>
+
     </v-toolbar>
   </div>
 </template>
