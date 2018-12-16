@@ -1,11 +1,21 @@
 <template>
  <v-container grid-list-md text-xs-center>
     <v-layout v-for="(time, index) in times" :key="index" :class="getColorClass(index)" row wrap>
-      <v-flex d-flex xs12 sm3 md1>
+      <v-flex d-flex xs12 sm3 md2>
         <v-card>
-          <v-card-text class="px-0">{{time.name}}
-            <span style="font-size: 2em; color:#3E2723;">
-              <i class="fas fa-clock"></i>{{time.label}}
+         <br/>
+         <br/>
+          <v-card-text class="px-0">
+             <span style="font-size:3em">
+            {{time.name}}
+            </span>
+            <span style="font-size: 3em; color:#3E2723;">
+              <i class="fas fa-clock"></i>
+             </span>
+             <br/>
+             <br/>
+             <span style="font-size:2em">
+             {{time.label}}
              </span>
           </v-card-text>
         </v-card>
