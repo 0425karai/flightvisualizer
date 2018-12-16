@@ -8,14 +8,18 @@
       dark
       app
     >
-      <v-toolbar-title class="mr-5 align-center">
-        <span class="title">FlightVisualizer</span>
-      </v-toolbar-title>
-      <span style="font-size: 2em; color: white;">
-        <i class="fas fa-plane-departure"></i>
-      </span>
+     <v-toolbar-title class="mr-5 align-center">
+        <router-link to="home" class="logo">
+          <span class="title">FlightVisualizer</span>
+       </router-link>
+     </v-toolbar-title>
+     <router-link to="home">
+       <span style="font-size: 2em; color: white;">
+         <i class="fas fa-plane-departure"></i>
+       </span>
+     </router-link>
       <v-spacer></v-spacer>
-    </v-toolbar>
+      </v-toolbar>
   </div>
 </template>
 
@@ -42,4 +46,8 @@ this.$router.push('/')
 </script>
 
 <style scoped lang="scss">
+.logo {
+  color: #fff;
+  text-decoration: none;
+}
 </style>
