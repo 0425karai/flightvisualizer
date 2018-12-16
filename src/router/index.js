@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "@/views/Home";
 import Layout from "@/views/Layout";
 import Result from "@/views/Result";
+import Photo from "@/views/Photo";
 import Landing from "@/views/Landing";
 
 Vue.use(Router);
@@ -24,6 +25,11 @@ const router = new Router({
           path: "/result",
           name: "result",
           component: Result
+        },
+        {
+          path: "/photo",
+          name: "photo",
+          component: Photo
         },
         {
           path: "/landing",

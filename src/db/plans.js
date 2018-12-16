@@ -1,36 +1,4 @@
 export default [
-<<<<<<< HEAD
-  [
-    {
-      from: "NRT",
-      t: "13:20",
-      to: "ICN",
-      T: "15:55"
-    },
-    {
-      from: "ICN",
-      t: "17:25",
-      to: "DEL",
-      T: "2:40"
-    }
-  ],
-  [
-    {
-      from: "NRT",
-      t: "13:20",
-      to: "ICN",
-      T: "15:55"
-    },
-    {
-      from: "ICN",
-      t: "17:25",
-      to: "DEL",
-      T: "2:40"
-    }
-  ]
-]
-  
-=======
     {
       id:"1",
       time:"12時間20分",
@@ -86,4 +54,3 @@ export default [
       atime2: "0:40"
     }
    ]
->>>>>>> 93e31bccdae100f3167e0d193660ea3cb12918fc

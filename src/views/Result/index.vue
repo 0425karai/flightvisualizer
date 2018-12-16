@@ -62,7 +62,7 @@
                 </v-layout>
               </v-flex>
               <v-flex d-flex xs6>
-                <v-card hover>
+                <v-card hover href="#/photo">
                   <v-img 
                   class="white--text" 
                   height="400px" 
