@@ -50,13 +50,13 @@ export default {
           {
             src: 'https://airportredcarpet.com/files/1614/1190/5054/Side_Transit.png'
           },
+          {
+            src: 'https://skyticket.jp/guide/wp-content/uploads/iStock-833487700-e1533801483709.jpg'
+          },
+          {
+            src: 'https://farm2.staticflickr.com/1549/23534473543_f6bf450154_b.jpg'
+          },
           
-          {
-            src: 'https://cdn.4travel.jp/img/thumbnails/imk/tips_pict/11/65/22/650x450_11652237.jpg'
-          },
-          {
-            src: 'https://baouc.com/upload/vanvan/2018/03/24/airport-transit-visa-schengen-vi-84d5fad70d-52069c7e217c71c36092e50ec9042e95.jpg'
-          },
           {
             src: 'https://cdn.citynomads.com/wp-content/uploads/2017/06/08154455/straits-kitchen-cover3.png'
           },
