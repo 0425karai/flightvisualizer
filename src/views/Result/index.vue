@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
-           出発日<p>{{ date1 }}〇〇空港発</p>
+           出発日<p>{{ date1 }}{{ start }}発</p>
            現地到着日<p>{{ date2 }}△△空港着</p>
         </v-flex>
       </v-layout>
@@ -126,7 +126,7 @@
           <v-layout row>
             <v-flex d-flex xs3>
               <v-card hover>
-                <v-card-text>NRT</br>▼</br>MUC</v-card-text>
+                <v-card-text>NRT<br/>▼<br/>MUC</v-card-text>
               </v-card>
             </v-flex>
             <v-flex d-flex xs6>
@@ -136,7 +136,7 @@
             </v-flex>
             <v-flex d-flex xs3>
               <v-card hover>
-                <v-card-text>NRT</br>▼</br>MUC</v-card-text>
+                <v-card-text>NRT<br/>▼<br/>MUC</v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
@@ -162,6 +162,8 @@ export default {
     console.log(this.date1);
     this.date2 = Vue.ls.get('date2');
     console.log(this.date2);
+    this.start = Vue.ls.get('start');
+    console.log(this.start);
   }
 }
 

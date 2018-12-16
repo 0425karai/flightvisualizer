@@ -1,8 +1,7 @@
 <template>
  <v-container grid-list-md text-xs-center>
-    <v-layout v-for="time in times" row :key="time.name" ;class="getColorClass(props.index)">
-
-      <v-flex xs2>
+    <v-layout v-for="(time, index) in times" :key="index" :class="getColorClass(index)" row wrap>
+      <v-flex d-flex xs12 sm12 md3>
         <v-card>
           <v-card-text class="px-0">{{time.name}}
             <span style="font-size: 2em; color:#3E2723;">
@@ -11,14 +10,14 @@
           </v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs5>
-        <v-card>
-          <v-card-text class="px-0"><v-img :src="time.recommend1"></v-img></v-card-text>
+      <v-flex d-flex xs12 sm3 md12>
+        <v-card dark color="primary">
+          <v-card-text class="px-0"><v-img :src="time.recommend1" aspect-ratio="2"></v-img></v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs5>
-        <v-card>
-          <v-card-text class="px-0"><v-img :src="time.recommend2"></v-img></v-card-text>
+      <v-flex d-flex xs12 sm3 md12>
+        <v-card dark color="primary">
+          <v-card-text class="px-0"><v-img :src="time.recommend2" aspect-ratio="2"></v-img></v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
@@ -47,8 +46,8 @@ export default {
         {
           value: false,
           name: '12hr',
-          recommend1: 'http://www.ab-road.net/CSP/img/INF/CITY/L/SEL/C00005_x.jpgroad.net%2fCSP%2fimg%2fINF%2fCITY%2fL%2fSEL%2fC00005_x.jpg&exph=346&expw=519&q=%e3%82%bd%e3%82%a6%e3%83%ab%e8%a6%b3%e5%85%89&simid=608050574551287668&selectedIndex=1&ajaxhist=0',
-          recommend2: 'https://tmyun.com/jpeg/yun_4879.jpg'
+          recommend1: 'https://www.hdwallpaper.nu/wp-content/uploads/2015/04/464629385-seoul.jpg',
+          recommend2: 'http://www.hikorea.jp/data/topinfo/topinfo_13336960261.jpg'
 
         }
       ]
