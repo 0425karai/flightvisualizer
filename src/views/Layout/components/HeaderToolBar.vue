@@ -19,10 +19,6 @@
        </span>
      </router-link>
       <v-spacer></v-spacer>
-<<<<<<< HEAD
-=======
-
->>>>>>> a920e6a9796fb7a3c0925b221329f7a900b3b296
       <v-toolbar-items>
         <v-btn flat>詳しく知る</v-btn>
         <v-btn flat>お問い合わせ</v-btn>
