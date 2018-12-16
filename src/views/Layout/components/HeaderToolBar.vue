@@ -9,23 +9,25 @@
       app
     >
      <v-toolbar-title class="mr-5 align-center">
-        <router-link to="home" class="logo">
-          <span class="title">FlightVisualizer</span>
+        <router-link to="landing" class="logo">
+          <span class="title">TransitExplorer</span>
        </router-link>
      </v-toolbar-title>
-     <router-link to="home">
+     <router-link to="landing">
        <span style="font-size: 2em; color: white;">
          <i class="fas fa-plane-departure"></i>
        </span>
      </router-link>
       <v-spacer></v-spacer>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a920e6a9796fb7a3c0925b221329f7a900b3b296
       <v-toolbar-items>
-      <v-btn flat>詳しく知る</v-btn>
-      <v-btn flat>お問い合わせ</v-btn>
+        <v-btn flat>詳しく知る</v-btn>
+        <v-btn flat>お問い合わせ</v-btn>
       
-    </v-toolbar-items>
-
+      </v-toolbar-items>
     </v-toolbar>
   </div>
 </template>
