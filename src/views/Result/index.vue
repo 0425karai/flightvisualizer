@@ -1,5 +1,49 @@
 <template>
    <v-content>
+     <script type="text/x-template" id="modal-template">
+      <transition name="modal">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container">
+
+              <div class="modal-header">
+                <slot name="header">
+                  default header
+                </slot>
+              </div>
+
+              <div class="modal-body">
+                <slot name="body">
+                  default body
+                </slot>
+              </div>
+
+              <div class="modal-footer">
+                <slot name="footer">
+                  default footer
+                  <button class="modal-default-button" @click="$emit('close')">
+                    OK
+                  </button>
+                </slot>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </script>
+
+    <!-- app -->
+    <div id="app">
+      <button id="show-modal" @click="showModal = true">Show Modal</button>
+      <!-- use the modal component, pass in the prop -->
+      <modal v-if="showModal" @close="showModal = false">
+        <!--
+          you can use custom content here to overwrite
+          default content
+        -->
+        <h3 slot="header">custom header</h3>
+      </modal>
+    </div>
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
@@ -148,6 +192,9 @@ export default {
     arr2: plans[0].arr2,
     aname2: plans[0].aname2,
     atime2: plans[0].atime2,
+
+      
+   
   }),
   created(){
     this.date1 = Vue.ls.get('date1');
@@ -178,8 +225,9 @@ export default {
       }
       return { hh: hh, mm: mm };
     }
-  }
+  } 
 }
+
 
 </script>
 
