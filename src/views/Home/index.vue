@@ -103,7 +103,7 @@
             <v-text-field
               slot="activator"
               v-model="date2"
-              label="現地出発日"
+              label="帰国日"
               prepend-icon="event"
               readonly
           ></v-text-field>

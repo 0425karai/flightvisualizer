@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
-           <p>出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　現地出発日{{ date2 }}　</p>
+           <p>出発日{{ date1 }}　{{ depart }}発　{{ arrive }}着　帰国日{{ date2 }}　</p>
         </v-flex>
       </v-layout>
       <v-layout row wrap >
@@ -76,7 +76,7 @@
                     <v-container fill-height fluid>
                       <v-layout fill-height>
                         <v-flex xs12 align-end flexbox>
-                          <div class="headline">{{ plan.aname1 }}周辺の</br>{{ plan.ttime }}で出来る体験を探す</div>
+                          <div class="headline">{{ plan.aname1 }}周辺の<br/>{{ plan.ttime }}で出来る体験を探す</div>
                       </v-flex>
                       </v-layout>
                     </v-container>
