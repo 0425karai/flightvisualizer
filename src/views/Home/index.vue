@@ -7,6 +7,11 @@
            <v-radio label="片道" value="radio-1"></v-radio>
            <v-radio label="往復" value="radio-2"></v-radio>
         </v-radio-group>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
       </v-layout>
       <v-layout row wrap>
         <v-spacer></v-spacer>
