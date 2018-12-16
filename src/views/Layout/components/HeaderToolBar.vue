@@ -9,11 +9,11 @@
       app
     >
      <v-toolbar-title class="mr-5 align-center">
-        <router-link to="home" class="logo">
-          <span class="title">FlightVisualizer</span>
+        <router-link to="landing" class="logo">
+          <span class="title">TransitExplorer</span>
        </router-link>
      </v-toolbar-title>
-     <router-link to="home">
+     <router-link to="landing">
        <span style="font-size: 2em; color: white;">
          <i class="fas fa-plane-departure"></i>
        </span>

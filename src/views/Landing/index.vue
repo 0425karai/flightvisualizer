@@ -19,7 +19,7 @@
     <v-container class ="blue white--text">
             <v-layout class="text-sm-left">
               <v-flex xs12  flexbox>
-                <span class="display-1">FlightVisualizerで、思いがけない素敵なトランジット体験ができるフライトプランを探してみませんか？</span>
+                <span class="display-1">TransitExplorerで、思いがけない素敵なトランジット体験ができるフライトプランを探してみませんか？</span>
                
               </v-flex>
             </v-layout>
@@ -64,7 +64,7 @@ export default {
             src: 'https://www.cathaypacific.com/content/dam/focal-point/cx/travel-information/airport/airport-HKIA-900x600.jpg'
           },
           {
-            src: 'https://wondertrip.jp/img/201608/iStock_60587576_XXXLARGE.jpg'
+            src: 'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2015/10/30/1510/Grand-Hyatt-Singapore-P615-Esplanade.jpg/Grand-Hyatt-Singapore-P615-Esplanade.16x9.adapt.1920.1080.jpg'
           },
           
         ]
