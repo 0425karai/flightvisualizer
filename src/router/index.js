@@ -14,7 +14,7 @@ const router = new Router({
       path: "/",
       name: "layout",
       component: Layout,
-      redirect: { name: "home" },
+      redirect: { name: "landing" },
       children: [
         {
           path: "/home",
