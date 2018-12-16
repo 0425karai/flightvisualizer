@@ -1,6 +1,6 @@
 <template>
    <v-content>
-    <v-container>
+    <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex>
            出発日<p>{{ date1 }}〇〇空港発</p>
@@ -17,44 +17,129 @@
         ></v-combobox>
         </v-flex>
       </v-layout>
-      <v-layout >
-        <v-flex xs3>
-          <v-card height="45">候補1<br/>8時間30分</v-card>
+      <v-layout column>
+        <v-flex d-flex md6>
+          <v-card color="blue" class="white--text">
+            <v-card-text>
+              <div class="headline">PLAN1　10時間　¥106592</div>
+            </v-card-text>
+          </v-card>
         </v-flex>
-        <v-flex xs9>
-            <svg viewbox="0 0 600 45" width="600" height="45">
-              <rect x="0" y="0" width="200" height="15" fill="#6fbadd" />
-              <rect x="280" y="0" width="150" height="15" fill="#6fbadd" />
-              <g font-family="sans-serif" font-size="15">
-                <text x="240" y="15" text-anchor="middle" fill="black">
-                  MUC
-                </text>
-                <text x="100" y="35" text-anchor="middle" fill="black">
-                  JAL
-                </text>
-              </g>
-            </svg>
+        <v-flex d-flex md6>
+          <v-layout row>
+            <v-flex d-flex xs3>
+              <v-layout column>
+                <v-flex d-flex>
+                  <v-card hover>
+                    <v-img 
+                    class="white--text" 
+                    height="200px" 
+                    src="https://www.narita-airport.jp/img/original/img_t006_banner_1__1.jpg"
+                    gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
+                      <v-container fill-height fluid>
+                        <v-layout fill-height>
+                          <v-flex xs12 align-end flexbox>
+                            <div class="headline">成田国際空港</div>
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </v-img>
+                  </v-card>
+                </v-flex>
+                <v-flex d-flex>
+                  <v-card hover>
+                    <v-card-text>
+                      <div class="headline">
+                        <div>NRT</div>
+                        <div>0:00</div>
+                        <div>▼</div>
+                        <div>MUC</div>
+                        <div>5:00</div>
+                      </div>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-flex>
+            <v-flex d-flex xs6>
+              <v-card hover>
+                <v-img 
+                class="white--text" 
+                height="400px" 
+                src="https://re-lief.net/wp-content/uploads/slw8.jpg"
+                gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
+                  <v-container fill-height fluid>
+                    <v-layout fill-height>
+                      <v-flex xs12 align-end flexbox>
+                        <div class="headline">仁川国際空港周辺の楽しいアクティビティ</div>
+                     </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-img>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs3>
+              <v-layout column>
+                
+                <v-flex d-flex>
+                  <v-card hover>
+                    <v-card-text>
+                      <div class="headline">
+                        <div>NRT</div>
+                        <div>0:00</div>
+                        <div>▼</div>
+                        <div>MUC</div>
+                        <div>5:00</div>
+                      </div>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex d-flex>
+                  <v-card hover>
+                    <v-img 
+                    class="white--text" 
+                    height="200px" 
+                    src="https://www.narita-airport.jp/img/original/img_t006_banner_1__1.jpg"
+                    gradient="to top, rgba(0,0,0,0), rgba(0,0,0,.3)">
+                      <v-container fill-height fluid>
+                        <v-layout fill-height>
+                          <v-flex xs12 align-end flexbox>
+                            <div class="headline">成田国際空港</div>
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </v-img>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-flex>
+          </v-layout>
         </v-flex>
       </v-layout>
-      <v-layout>
-        <v-flex xs3>
-          <v-card height="45">候補2<br/>7時間</v-card>
+      <v-layout column>
+        <v-flex d-flex md6 >
+          <v-card color="blue">
+            <v-card-text  class="white--text">候補1　10時間　¥106592</v-card-text>
+          </v-card>
         </v-flex>
-        <v-flex xs9>
-            <svg viewbox="0 0 600 45" width="600" height="45">
-              <rect x="20" y="15" width="350" height="15" fill="#6fbadd" />
-            </svg>
-        </v-flex>
-      </v-layout>
-      <v-layout>
-        <v-flex xs3>
-          <p>候補3<br/>9時間15分</p>
-        </v-flex>
-        <v-flex xs9>
-            <svg viewbox="0 0 600 45" width="600" height="45">
-              <rect x="100" y="15" width="120" height="15" fill="#6fbadd" />
-              <rect x="280" y="15" width="250" height="15" fill="#6fbadd" />
-            </svg>
+        <v-flex d-flex md6>
+          <v-layout row>
+            <v-flex d-flex xs3>
+              <v-card hover>
+                <v-card-text>NRT</br>▼</br>MUC</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs6>
+              <v-card hover>
+                <v-card-text>かっこいい写真</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs3>
+              <v-card hover>
+                <v-card-text>NRT</br>▼</br>MUC</v-card-text>
+              </v-card>
+            </v-flex>
+          </v-layout>
         </v-flex>
       </v-layout>
     </v-container>
@@ -74,9 +159,9 @@ export default {
   }),
   created(){
     this.date1 = Vue.ls.get('date1');
-    console.log(date1);
+    console.log(this.date1);
     this.date2 = Vue.ls.get('date2');
-    console.log(date2);
+    console.log(this.date2);
   }
 }
 
