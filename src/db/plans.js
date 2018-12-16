@@ -45,8 +45,8 @@ export default [
           name: '12hr',
           recommend1: 'https://www.hdwallpaper.nu/wp-content/uploads/2015/04/464629385-seoul.jpg',
           recommend2: 'http://www.hikorea.jp/data/topinfo/topinfo_13336960261.jpg',
-          label: '市街地に出てみよう'
-
+          label: '市街地に',
+          label2: '出てみよう'
         }
       ]
     },
@@ -94,7 +94,8 @@ export default [
           name: '12hr',
           recommend1: 'https://d18gmz9e98r8v5.cloudfront.net/ptr/20140731002520_1437589073_10009_8.jpg',
           recommend2: 'https://tabizine.jp/wp-content/uploads/2017/12/161239-01-640x360.jpg',
-          label: '市街地に出てみよう'
+          label: '市街地に',
+          label2: '出てみよう'
 
         }
       ]
@@ -143,7 +144,8 @@ export default [
           name: '12hr',
           recommend1: 'http://tabippo.net/wp-content/uploads/shutterstock_150265067.jpg',
           recommend2: 'http://livedoor.blogimg.jp/sevenhdr/imgs/a/0/a06e652f.jpg',
-          label: '市街地に出てみよう'
+          label: '市街地に',
+          label2: '出てみよう'
 
         }
       ]

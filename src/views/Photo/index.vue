@@ -15,7 +15,7 @@
             <br/>
             <br/>
             <span style="font-size:2em">
-             {{time.label}}
+             {{time.label}}<br/>{{time.label2}}
             </span>
           </v-card-text>
         </v-card>
