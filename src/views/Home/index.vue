@@ -7,16 +7,24 @@
            <v-radio label="片道" value="radio-1"></v-radio>
            <v-radio label="往復" value="radio-2"></v-radio>
         </v-radio-group>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
       </v-layout>
       <v-layout row wrap>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="出発地" 
+         <v-text-field
+          v-model="start" label="出発地" 
          v-on:keyup.enter="doneEdit" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
         <v-flex xs4>
-         <v-text-field label="目的地" ref="goal" outline></v-text-field>
+         <v-text-field
+          v-model="goal" label="目的地"
+          ref="goal" outline></v-text-field>
         </v-flex>
         <v-spacer></v-spacer>
       </v-layout>
@@ -44,7 +52,12 @@
               prepend-icon="event"
               readonly
             ></v-text-field>
-            <v-date-picker v-model="date1" color="light-blue" scrollable>
+            <v-date-picker
+              v-model="date1"
+              :min="getCurrentDate()"
+              color="light-blue"
+              scrollable
+            >
               <v-spacer></v-spacer>
               <v-btn flat color="light-blue" @click="modal1 = false">Cancel</v-btn>
               <v-btn flat color="light-blue" @click="$refs.menu1.save(date1)">OK</v-btn>
@@ -67,11 +80,16 @@
             <v-text-field
               slot="activator"
               v-model="date2"
-              label="現地到着日"
+              label="現地出発日"
               prepend-icon="event"
               readonly
           ></v-text-field>
-          <v-date-picker v-model="date2" color="pink" scrollable>
+          <v-date-picker 
+            v-model="date2"
+            :min="date1"
+            color="pink" 
+            scrollable
+          >
             <v-spacer></v-spacer>
             <v-btn flat color="pink" @click="modal2 = false">Cancel</v-btn>
             <v-btn flat color="pink" @click="$refs.menu2.save(date2)">OK</v-btn>
@@ -140,6 +158,7 @@ import Vue from 'vue';
 export default {
   name: "Home",
   data: () => ({
+    start: null,
     date1: new Date().toISOString().substr(0, 10),
     date2: new Date().toISOString().substr(0, 10),
     modal1: false,
@@ -147,21 +166,35 @@ export default {
     countselect: '1',
     seatselect: 'first',
     counts: ['1','2','3','4','5','6'],
-    seats: ['first', 'business', 'economy']
+    seats: ['first', 'business', 'economy'],
   }),
 
   methods:{
     search: function (event) {
       Vue.ls.set('date1', this.date1);
       Vue.ls.set('date2', this.date2);
+      Vue.ls.set('start', this.start);
+      Vue.ls.set('goal', this.goal);
+      console.log(this.start);
      this.$router.push("/result")
     },
-  methods: {
     doneEdit: function() {
       this.$refs.goal.focus()
+    },
+    min: val => this.date1,
+    getCurrentDate() {
+      var date = new Date();
+      var mm = date.getMonth() + 1; // getMonth() is zero-based
+      var dd = date.getDate();
+
+      var result = [date.getFullYear(),
+              (mm>9 ? '' : '0') + mm,
+              (dd>9 ? '' : '0') + dd
+            ].join('-');
+      console.log(result)
+      return result
     }
-  } 
- }
+  }
 };
 </script>
 

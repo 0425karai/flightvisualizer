@@ -1,22 +1,28 @@
 <template>
-
  <v-container grid-list-md text-xs-center>
-    <v-layout v-for="time in times" row :key="time.name">
-      <v-flex xs2>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">{{time.name}}</v-card-text>
+    <v-layout v-for="(time, index) in times" :key="index" :class="getColorClass(index)" row wrap>
+      <v-flex d-flex xs12 sm3 md1>
+        <v-card>
+          <v-card-text class="px-0">{{time.name}}
+            <span style="font-size: 2em; color:#3E2723;">
+              <i class="fas fa-clock"></i>
+             </span>
+          </v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs5>
+      <v-spacer></v-spacer>
+      <v-flex d-flex xs12 sm3 md5>
         <v-card dark color="primary">
-          <v-card-text class="px-0"><v-img :src="time.recommend1" aspect-ratio="1.7"></v-img></v-card-text>
+          <v-card-text class="px-0"><v-img :src="time.recommend1" aspect-ratio="2"></v-img></v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs5>
+      <v-spacer></v-spacer>
+      <v-flex d-flex xs12 sm3 md5>
         <v-card dark color="primary">
-          <v-card-text class="px-0"><v-img :src="time.recommend2" aspect-ratio="1.7"></v-img></v-card-text>
+          <v-card-text class="px-0"><v-img :src="time.recommend2" aspect-ratio="2"></v-img></v-card-text>
         </v-card>
       </v-flex>
+      <v-spacer></v-spacer>
     </v-layout>
   </v-container>
 </template>
@@ -26,8 +32,6 @@ export default {
   name: "Photo",
   data () {
     return {
-      
-      
       times: [
         {
           value: false,
@@ -51,6 +55,24 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+      getColorClass(index) {
+        switch (Number(index) % 3) {
+          case 0:
+            return "lime lighten-3";
+            break;
+          case 1:
+            return "lime lighten-2";
+            break;
+          case 2:
+            return "lime lighten-1";
+            break;
+          default:
+            return "white";
+        }
+      }
+    }  
   }
-}
+
 </script>
